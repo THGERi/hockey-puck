@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import thgeri17.footievault.entity.Team;
-import thgeri17.footievault.model.TeamCreatModel;
+import thgeri17.footievault.model.TeamCreateModel;
 import thgeri17.footievault.model.TeamModel;
 import thgeri17.footievault.model.TeamUpdateModel;
 import thgeri17.footievault.repository.TeamRepository;
@@ -29,8 +29,8 @@ public class TeamService {
                 .collect(Collectors.toList());
     }
 
-    public TeamModel addTeam(TeamCreatModel teamCreatModel) {
-        return Mapper.mapTeamEntitytoTeamModel(teamRepository.save(Mapper.mapTeamCreatModelToTeamEntity(teamCreatModel)));
+    public TeamModel addTeam(TeamCreateModel teamCreateModel) {
+        return Mapper.mapTeamEntitytoTeamModel(teamRepository.save(Mapper.mapTeamCreatModelToTeamEntity(teamCreateModel)));
     }
 
     public Team findTeamById(Long id) {

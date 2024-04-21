@@ -13,7 +13,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class PlayerCreatModel {
+public class PlayerCreateModel {
 
     private Long id;
 

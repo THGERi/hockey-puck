@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import thgeri17.footievault.entity.Team;
-import thgeri17.footievault.model.TeamCreatModel;
+import thgeri17.footievault.model.TeamCreateModel;
 import thgeri17.footievault.model.TeamModel;
 import thgeri17.footievault.model.TeamUpdateModel;
 import thgeri17.footievault.service.TeamService;
@@ -31,8 +31,8 @@ public class TeamController {
     }
 
     @PostMapping("/teams")
-    public ResponseEntity<TeamModel> creatTeam(@RequestBody TeamCreatModel teamCreatModel) {
-        return ResponseEntity.status(200).body(teamService.addTeam(teamCreatModel));
+    public ResponseEntity<TeamModel> createTeam(@RequestBody TeamCreateModel teamCreateModel) {
+        return ResponseEntity.status(201).body(teamService.addTeam(teamCreateModel));
     }
 
     @DeleteMapping("/teams/{id}")

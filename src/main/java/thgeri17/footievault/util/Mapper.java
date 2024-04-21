@@ -17,7 +17,7 @@ public class Mapper {
 
         return playermodel;
     }
-    public static Player mapPlayerCreatModelToPlayerEntity(PlayerCreatModel model) {
+    public static Player mapPlayerCreatModelToPlayerEntity(PlayerCreateModel model) {
         Player player = new Player();
         player.setPlayerName(model.getPlayerName());
         player.setBirthOfDate(model.getDateOffBirth());
@@ -39,7 +39,7 @@ public class Mapper {
 
     }
 
-    public static Team mapTeamCreatModelToTeamEntity(TeamCreatModel model) {
+    public static Team mapTeamCreatModelToTeamEntity(TeamCreateModel model) {
         Team team = new Team();
         team.setLocation(model.getLocation());
         team.setTeamName(model.getTeamName());

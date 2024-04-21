@@ -30,7 +30,7 @@ public class MatchController {
     }
 
     @PostMapping("/matches")
-    public ResponseEntity<MatchModel> creatMatch(@RequestBody MatchCreateModel matchCreateModel) {
+    public ResponseEntity<MatchModel> createMatch(@RequestBody MatchCreateModel matchCreateModel) {
         return ResponseEntity.status(201).body(matchService.creatMatch(matchCreateModel));
     }
     @DeleteMapping("/matches/{id}")

@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import thgeri17.footievault.entity.Player;
-import thgeri17.footievault.model.PlayerCreatModel;
+import thgeri17.footievault.model.PlayerCreateModel;
 import thgeri17.footievault.model.PlayerModel;
 import thgeri17.footievault.model.PlayerUpdateModel;
 import thgeri17.footievault.service.PlayerService;
@@ -25,8 +25,8 @@ public class PlayerController {
     }
 
     @PostMapping("/players")
-    public ResponseEntity<PlayerModel> createPlayer(@RequestBody PlayerCreatModel playerCreatModel) {
-        return ResponseEntity.status(200).body(playerService.creatPlayer(playerCreatModel));
+    public ResponseEntity<PlayerModel> createPlayer(@RequestBody PlayerCreateModel playerCreateModel) {
+        return ResponseEntity.status(201).body(playerService.creatPlayer(playerCreateModel));
     }
 
     @GetMapping("/players/{id}")

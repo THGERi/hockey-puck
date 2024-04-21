@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import thgeri17.footievault.entity.Player;
-import thgeri17.footievault.model.PlayerCreatModel;
+import thgeri17.footievault.model.PlayerCreateModel;
 import thgeri17.footievault.model.PlayerModel;
 import thgeri17.footievault.model.PlayerUpdateModel;
 import thgeri17.footievault.repository.PlayerRepository;
@@ -38,8 +38,8 @@ public class PlayerService {
                 });
     }
 
-    public PlayerModel creatPlayer(PlayerCreatModel playerCreatModel) {
-        return Mapper.mapPlayerEntitytoPlayerModel(playerRepository.save(Mapper.mapPlayerCreatModelToPlayerEntity(playerCreatModel)));
+    public PlayerModel creatPlayer(PlayerCreateModel playerCreateModel) {
+        return Mapper.mapPlayerEntitytoPlayerModel(playerRepository.save(Mapper.mapPlayerCreatModelToPlayerEntity(playerCreateModel)));
     }
 
     public void deletePlayers(Long id) {
