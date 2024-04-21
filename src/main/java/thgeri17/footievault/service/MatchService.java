@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import thgeri17.footievault.entity.Match;
-import thgeri17.footievault.model.MatchCreatModel;
+import thgeri17.footievault.model.MatchCreateModel;
 import thgeri17.footievault.model.MatchModel;
 import thgeri17.footievault.model.MatchUpdateModel;
 import thgeri17.footievault.repository.MatchRepository;
@@ -37,8 +37,8 @@ public class MatchService {
                     return new NoSuchElementException(message);
                 });
     }
-    public MatchModel creatMatch(MatchCreatModel matchCreatModel) {
-        return Mapper.mapMatchEntitytoMatchModel(matchRepository.save(Mapper.mapMatchCreatModelToMatchEntity(matchCreatModel)));
+    public MatchModel creatMatch(MatchCreateModel matchCreateModel) {
+        return Mapper.mapMatchEntitytoMatchModel(matchRepository.save(Mapper.mapMatchCreatModelToMatchEntity(matchCreateModel)));
     }
 
     public void deleteMatch(Long id) {

@@ -58,7 +58,7 @@ public class Mapper {
         return matchmodel;
     }
 
-    public static Match mapMatchCreatModelToMatchEntity(MatchCreatModel model) {
+    public static Match mapMatchCreatModelToMatchEntity(MatchCreateModel model) {
         Match currentMatch = new Match();
         currentMatch.setHomeVSaway(model.getHomeVSaway());
         currentMatch.setStartDate(model.getStartDate());

@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class MatchCreatModel {
+public class MatchCreateModel {
 
     private Long id;
 

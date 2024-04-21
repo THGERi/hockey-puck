@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import thgeri17.footievault.entity.Match;
-import thgeri17.footievault.model.MatchCreatModel;
+import thgeri17.footievault.model.MatchCreateModel;
 import thgeri17.footievault.model.MatchModel;
 import thgeri17.footievault.model.MatchUpdateModel;
 import thgeri17.footievault.service.MatchService;
@@ -30,8 +30,8 @@ public class MatchController {
     }
 
     @PostMapping("/matches")
-    public ResponseEntity<MatchModel> creatMatch(@RequestBody MatchCreatModel matchCreatModel) {
-        return ResponseEntity.status(200).body(matchService.creatMatch(matchCreatModel));
+    public ResponseEntity<MatchModel> creatMatch(@RequestBody MatchCreateModel matchCreateModel) {
+        return ResponseEntity.status(201).body(matchService.creatMatch(matchCreateModel));
     }
     @DeleteMapping("/matches/{id}")
     public ResponseEntity<Void> deleteMatch(@PathVariable Long id) {
