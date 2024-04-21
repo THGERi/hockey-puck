@@ -31,7 +31,7 @@ public class MatchController {
 
     @PostMapping("/matches")
     public ResponseEntity<MatchModel> createMatch(@RequestBody MatchCreateModel matchCreateModel) {
-        return ResponseEntity.status(201).body(matchService.creatMatch(matchCreateModel));
+        return ResponseEntity.status(201).body(matchService.createMatch(matchCreateModel));
     }
     @DeleteMapping("/matches/{id}")
     public ResponseEntity<Void> deleteMatch(@PathVariable Long id) {

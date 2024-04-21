@@ -49,9 +49,11 @@ class MatchControllerIT {
 
 
         MatchModel createdMatch = new MatchModel(matchCreateModel.getId(), matchCreateModel.getHomeVSaway(), matchCreateModel.getStartDate(), matchCreateModel.getEndDate(), new ArrayList<>());
-        when(matchService.creatMatch(any(MatchCreateModel.class))).thenReturn(createdMatch);
+        when(matchService.createMatch(any(MatchCreateModel.class))).thenReturn(createdMatch);
 
-        MvcResult result = mockMvc.perform(post("/api/matches").contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(matchCreateModel)))
+        MvcResult result = mockMvc.perform(post("/api/matches")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(objectMapper.writeValueAsString(matchCreateModel)))
                 .andExpect(status().isCreated())
                 .andReturn();
 

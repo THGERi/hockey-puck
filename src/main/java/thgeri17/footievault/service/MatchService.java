@@ -37,7 +37,7 @@ public class MatchService {
                     return new NoSuchElementException(message);
                 });
     }
-    public MatchModel creatMatch(MatchCreateModel matchCreateModel) {
+    public MatchModel createMatch(MatchCreateModel matchCreateModel) {
         return Mapper.mapMatchEntitytoMatchModel(matchRepository.save(Mapper.mapMatchCreatModelToMatchEntity(matchCreateModel)));
     }
 
